@@ -35,14 +35,11 @@ class AvlTree
 		void          remove(const Object &x);
 		void          printTree(std::ostream &os=std::cout)const;
 
-
 	private:
 		AvlNode *root;
 
 		int      height(AvlNode *t)const;
 		int      max(int a,int b)const;
-		AvlNode* findMin(AvlNode *t)const;
-		AvlNode* findMax(AvlNode *t)const;
 		void     insert(const Object &x,AvlNode *&t);
 		void     insert(Object &&x,AvlNode *&t);
 		void     remove(const Object &x,AvlNode *&t);
@@ -57,6 +54,9 @@ class AvlTree
 		void     post_order_travelsal(AvlNode *t,std::ostream &os=std::cout)const;
 		void     makeEmpty(AvlNode *&t);
 		AvlNode* clone(AvlNode *t)const;
+		AvlNode* findMin(AvlNode *t)const;
+		AvlNode* findMax(AvlNode *t)const;
+
 		
 };
 
@@ -75,7 +75,6 @@ AvlTree<Object>::AvlTree(const std::initializer_list<Object> &olist):root(nullpt
 		insert(*it);
 	}
 }
-
 
 template<typename Object>
 AvlTree<Object>& AvlTree<Object>::operator=(const AvlTree &rhs){
