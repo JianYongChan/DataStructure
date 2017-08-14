@@ -1,8 +1,25 @@
+/*
+ * =====================================================================================
+ *
+ *       Filename:  A.h
+ *
+ *    Description:  The header file of AvlTree.
+ *
+ *        Version:  1.0
+ *        Created:  08/14/2017 05:04:01 PM
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  ctom
+ *   Organization:  iEach
+ *
+ * =====================================================================================
+ */
 #ifndef AVLTREE_H__
 #define AVLTREE_H__
-#include<iostream>
-#include<utility>
-#include<initializer_list>
+#include <iostream>
+#include <utility>
+#include <initializer_list>
 
 static const int ALLOWED_IMBALANCE = 1;
 
